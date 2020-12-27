@@ -21,7 +21,7 @@ body{
 
 .topbar-section{
     float: left;
-    border-left: 1px #cccccc solid;
+    border-left: 1px #E4E4E4 solid;
     height: 100%;
 }
 
@@ -85,16 +85,39 @@ h1{
     padding: 0;
     margin: 0;
     color: white;
-    font-size: 10px;
-    font-stretch: 100%;
-    line-height: 100px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-size: 50px;
+    font-weight: normal;
+    padding-top: 10px;
 
 }
-
-
 
 .clear{
     clear: both;
 }
+
+#menu-bar-2-continer{
+    background-color:#bb1919;
+    width: 100%;
+}
+
+#menu-bar-2{
+    width: 1210px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+#menu-bar-2 a{
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    border-right: 1px #ffe9e931 solid;
+    font-size: 16px;
+    position: relative;
+    top: 9px;
+
+}
+
+#menu-bar-2 a:hover{
+    text-decoration: underline;
+}
+
