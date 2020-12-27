@@ -8,20 +8,10 @@
 
         <style>
 
-            #shape{
-                width: 200px;
-                height: 200px;
+            #shap{
                 background-color: red;
+                display: none;
             }
-
-
-            .circle{
-                background-color: random_color ;
-                width: random_height_width;
-                height: random_height_width;
-                border-radius: 50%;
-            }
-
 
 
         </style>
@@ -32,25 +22,43 @@
 
         <body>
 
-            <div id="shape"></div>
+            <p>Your Time: <span id="timeTaken"></span></p>
 
+            <div id="shap" class="circle"></div>
 
-            <div id="random_circle" class="circle">
+            
 
-            </div>
+            <script text="text/javascript">
+                var time_start = new Date().getTime();
+                function makeShapeAppear(){
 
-            <div class="square">
+                    var random = Math.random() * 1200;
 
+                    document.getElementById("shap").style.marginTop = random + "px";
+                    document.getElementById("shap").style.marginLeft = random + "px";
+                    document.getElementById("shap").style.width = random + "px";
+                    document.getElementById("shap").style.height = random + "px";
 
-            </div>
+                    document.getElementById("shap").style.display = "block";
 
-            <script text="Javascript">
-                
-                var random_color = "";
-                var random_height_width = null;
-                document.getElementById("shape").onclick = function(){
-                    document.getElementById("shape").style.display = "none"
+                    time_start = new Date().getTime();
                 }
+                
+                function appearAfterDelay(){
+                    setTimeout(makeShapeAppear, Math.random()*2000);
+                }
+
+                appearAfterDelay();
+                
+                document.getElementById("shap").onclick = function(){
+                    document.getElementById("shap").style.display = "none";
+                    var time_end = new Date().getTime();
+                    var time_taken = (time_end - time_start)/1000;
+                    document.getElementById("timeTaken").innerHTML = time_taken + "s";
+                    appearAfterDelay();
+                }
+                
+                
 
             </script>
 
