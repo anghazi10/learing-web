@@ -1,0 +1,2 @@
+The VMware Tools package is not running in this virtual machine. The package might be necessary for the guest operating system to run at resolutions higher than 640x480 with 16 colors. The package provides significant performance benefits as well. To install it, choose VM > Install VMware Tools… after the guest operating system starts.
+VMware Workstation can remind you to install the VMware Tools package when you power on the VM. Select OK to enable the reminder.
